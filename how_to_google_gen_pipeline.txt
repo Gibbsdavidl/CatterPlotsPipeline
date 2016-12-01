@@ -20,6 +20,7 @@
 # -- changing the Maintainer.
 # -- remove the gsl install part.
 # -- changes the R package installs
+# -- change the apt-get packages 
 # -- adding my own package install from my github repo
 # See the Dockerfile in this repo.
 
@@ -27,7 +28,6 @@
 # 4. Then I'm going to build the image
 # https://docs.docker.com/engine/getstarted/step_four/
 docker build -t gibbsdocker ~/Code/DockerExpr/
-
 
 # this builds the image called gibbsdocker from the Dockerfile found in the
 # Code/DockerExpr directory.
