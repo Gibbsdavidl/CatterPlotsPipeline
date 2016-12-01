@@ -6,6 +6,8 @@
 # dgibbs@systemsbiology.org
 # December 1, 2016
 
+# https://cloud.google.com/genomics/overview
+
 #################################################################################
 
 # 1. I searched hub.docker.com for 'bioconductor' to get some example dockerfiles.
