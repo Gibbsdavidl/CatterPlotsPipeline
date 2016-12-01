@@ -1,0 +1,45 @@
+{
+	"name": "samtools",
+	"inputParameters": [
+		{
+			"name": "bamFile",
+			"localCopy": {
+				"path": "C836.Sq-1.1.bam",
+				"disk": "samtools"
+			}
+		}
+	],
+	"outputParameters": [
+		{
+			"name": "baiFile",
+			"localCopy": {
+				"path": "C836.Sq-1.1.bam.bai",
+				"disk": "samtools"
+			}
+		}
+	],
+	"resources": {
+		"zones": [
+			"us-central1-a",
+			"us-central1-b",
+			"us-central1-c",
+			"us-central1-f",
+			"us-east1-b",
+			"us-east1-c",
+			"us-east1-d"
+		],
+		"disks": [
+			{
+				"name": "samtools",
+				"autoDelete": true,
+				"mountPoint": "/samtools"
+			}
+		],
+		"minimumCpuCores": 1,
+		"minimumRamGb": 2
+	},
+	"docker": {
+		"imageName": "b.gcr.io/isb-cgc-public-docker-images/samtools:1.3.1",
+		"cmd": "cd /samtools && samtools index C836.Sq-1.1.bam"
+	}
+}
