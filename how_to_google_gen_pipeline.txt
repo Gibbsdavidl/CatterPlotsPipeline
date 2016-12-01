@@ -9,9 +9,7 @@
 #################################################################################
 
 # 1. I searched hub.docker.com for 'bioconductor' to get some example dockerfiles.
-
-
-# 2. We can build off another defined file, such as https://hub.docker.com/r/rocker/tidyverse/
+     Alternatively, we can build off another defined file, such as https://hub.docker.com/r/rocker/tidyverse/
 
 
 # 3. I'm going to revise this docker file:
@@ -46,6 +44,8 @@ docker push gibbsdavidl/gibbsdocker
 
 
 # Now we call the genomics pipeline to run it.
+# https://cloud.google.com/genomics/install-genomics-tools
+
 gcloud alpha genomics pipelines run \
 --pipeline-file gibbsdocker-pipeline.yaml \
 --inputs INPUT_FILE=gs://gibbs_bucket_nov162016/catter_input.txt \
@@ -54,7 +54,7 @@ gcloud alpha genomics pipelines run \
 --logging gs://gibbs_bucket_nov162016/logs/
 
 
-# OK, it returns saying
+# OK, it returns saying:
 Running [operations/ENGRyN6LKxib783r--jChQcg6YmPu4QUKg9wcm9kdWN0aW9uUXVldWU].
 
 
@@ -157,4 +157,4 @@ name: operations/ENGRyN6LKxib783r--jChQcg6YmPu4QUKg9wcm9kdWN0aW9uUXVldWU
 
 
 # Now, we can check our bucket for the output.
-# DONE
+# DONE!
